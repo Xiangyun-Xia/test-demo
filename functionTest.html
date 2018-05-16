@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+<script>
+  const applyState = (target, ...args) => {
+  for (var i = 0; i < args.length; i++) {
+    const state = args[i]
+    Object.keys(state).map((key) => {
+      Vue.set(target, key, state[key])
+    })
+  }
+}
+
+const convertToKeysValues = (list = [], key, callback) => {
+  return list.reduce((accumulator, item, index) => {
+    const value = item[key]
+    // isFunction(callback) && callback(item, index)
+    accumulator.keys.push(value)
+    accumulator.values[`${value}`] = item
+    return accumulator
+  }, { keys: [], values: {} })
+}
+
+const createKeysValues = (options = {}) => {
+  return { keys: [], values: {}, ...options }
+}
+</script>
