@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html,body{
+      height: 100%;
+      width: 100%;
+    }
+    .container {
+      height: 500px;
+      width: 1000px;
+      margin: 100px auto;
+      background-color: #ccc;
+    }
+
+    .round {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      background-color: red;
+      position: relative;
+    }
+
+    .round::before{
+      display: block;
+      height: 60px;
+      width: 60px;
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background-color: green;
+      top: 20px;
+      left: 20px;
+    }
+
+    .round::after{
+      display: block;
+      height: 20px;
+      width: 20px;
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background-color: red;
+      top: 40px;
+      left: 40px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="round"></div>
+  </div>
+</body>
+</html>
