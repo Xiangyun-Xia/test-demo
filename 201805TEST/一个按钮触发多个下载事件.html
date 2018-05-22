@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+<script>
+   openDown () {
+        const triggerDelay = 100;
+        const removeDelay = 1000;
+        const {createIFrame}= this
+        this.state.forEach((item, index)=>{
+            createIFrame(item.fileUrl, index * triggerDelay, removeDelay)
+        })
+    },
+    createIFrame (url, triggerDelay, removeDelay) {
+        setTimeout(function (){
+            // 动态添加iframe,设置src,然后删除
+            const frame = document.createElement(‘iframe‘) //创建a对象
+            frame.setAttribute(‘style‘, ‘display: none‘)
+            frame.setAttribute(‘src‘, url)
+            frame.setAttribute(‘id‘, ‘iframeName‘)
+            document.body.appendChild(frame)
+            setTimeout(function(){
+                const node =  document.getElementById(‘iframeName‘)
+                node.parentNode.removeChild(node)
+            }, removeDelay)
+        }, triggerDelay)
+    }
+</script>
