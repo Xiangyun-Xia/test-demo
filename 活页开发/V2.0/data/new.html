@@ -29,22 +29,24 @@
         }
 
         @page :left{
-            size : 21.6cm 30.5cm;
-            margin-top:2.90cm;
-            margin-bottom: 2.90cm;
-            margin-left: 2.30cm;
-            margin-right: 2.30cm;
+            size : 18.2cm 24.9cm;
+            margin-top:1.2cm;
+            margin-bottom: 1.2cm;
+            margin-left: 0.7cm;
+            margin-right: 1.3cm;
+            background-color: aqua;
         }
 
         @page :right{
-            size : 21.6cm 30.5cm;
-            margin-top:2.90cm;
-            margin-bottom: 2.90cm;
-            margin-left: 2.30cm;
-            margin-right: 2.30cm;
+            size : 18.2cm 24.9cm;
+            margin-top:1.2cm;
+            margin-bottom: 1.2cm;
+            margin-left: 1.3cm;
+            margin-right: 0.7cm;
+            background-color: red;
         }
 
-        @page :left{
+       /* @page :left{
             @top-center {
                 margin-top:3cm;
                 content: counter(page);
@@ -53,7 +55,7 @@
                 background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/counter-left.png) no-repeat left bottom;
                 background-size: 3.2cm 1.2cm;
                 font-size: 14px;
-                /*font-weight: bold;*/
+                !*font-weight: bold;*!
                 font-family: Times New Roman;
             }
 
@@ -71,14 +73,14 @@
                 background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/counter-right.png) no-repeat right bottom;
                 background-size:3.2cm 1.2cm;
                 font-size: 14px;
-                /*font-weight: bold;*/
+                !*font-weight: bold;*!
                 font-family: Times New Roman;
             }
 
             @bottom-center {
                 content: element(footer);
             }
-        }
+        }*/
 
         /*郜金丹 start*/
       /*  *{
@@ -729,6 +731,10 @@
         /*郜金丹 end*/
 
         /* 夏老师**/
+        /* reset */
+
+        /* reset */
+
         body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, a, fieldset, input, textarea, p, blockquote, th, td, button {
             margin: 0;
             padding: 0;
@@ -765,112 +771,115 @@
             width: 100%;
             color: #000;
             background: #fff;
-            font-size: 14px;
-            line-height: 1.25;
+            font-size: 9pt;
         }
-
 
         /* 公共样式 */
 
         .common-page {
-            width: 1030px;
-            padding: 20px;
-            margin: 20px auto;
-            border: 1px solid #000;
+            width: 100%;
         }
 
         .common-title {
             height: 22px;
+            width: 100%;
             line-height: 22px;
             font-size: 16px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
 
         .common-content {
+            width: 100%;
             border: 1px solid #E0E7EE;
-            padding: 20px 30px;
+            padding: 10px;
         }
 
         /* 概要分析 */
 
-        .report-content {
-            padding: 20px 40px;
-        }
-
         .big-title {
-            height: 45px;
-            line-height: 45px;
-            font-size: 32px;
+            height: 22px;
+            width: 100%;
+            line-height: 22px;
+            font-size: 14pt;
             color: #333333;
             text-align: center;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         .desc-title {
             height: 20px;
+            width: 100%;
             line-height: 20px;
             color: #333333;
             text-align: center;
             margin-bottom: 20px;
         }
 
+        .desc-class {
+            margin: 0px 14px 0px 8px;
+        }
+
         .grade-box {
-            height: 140px;
+            width: 94%;
+            height: 70px;
             border: 1px solid #d3d3d3;
             border-radius: 5px;
-            padding: 20px;
-            display: flex;
-            flex-direction: row;
+            padding: 10px;
+            padding-left: 0;
             margin-bottom: 20px;
         }
 
         .grade-box-left {
-            width: 190px;
+            height: 70px;
+            width: 120px;
             border-right: 1px solid #999;
             text-align: center;
+            float: left;
         }
 
         .grade-box-left-title {
             height: 16px;
             line-height: 16px;
-            font-size: 16px;
+            font-size: 9pt;
             color: #333333;
-            margin-top: 8px;
+            margin-top: 4px;
         }
 
         .grade-box-left-score {
-            height: 34px;
-            line-height: 34px;
-            font-size: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 22px;
             color: #333333;
-            margin-top: 25px;
+            margin-top: 10px;
         }
 
         .grade-box-left-grade {
-            height: 50px;
-            line-height: 36px;
-            width: 50px;
-            font-family: "HannotateSC-W7";
-            background: url(../img/flower.png) no-repeat;
-            margin: 16px auto 0;
+            height: 36px;
+            line-height: 26px;
+            width: 34px;
+            font-size: 7pt;
+            background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/flower.png) no-repeat;
+            background-size: 100% 100%;
+            margin: 6px auto 0;
         }
 
         .grade-box-right {
-            flex: 1;
-            padding-left: 56px;
+            height: 60px;
+            margin-left: 30px;
+            float: left;
         }
 
         .grade-box-right-top {
-            margin-top: 18px;
-            margin-bottom: 24px;
-            height: 20px;
-            line-height: 20px;
-            font-size: 14px;
+            margin-top: 16px;
+            height: 14px;
+            line-height: 14px;
+            font-size: 8pt;
             color: #333333;
+            margin-bottom: 10px;
         }
 
         .grade-box-right-top span {
-            margin-right: 50px;
+            margin-right: 10px;
         }
 
         .grade-box-right-top span:last-child {
@@ -880,7 +889,7 @@
         .grade-box-right-bottom {
             height: 22px;
             line-height: 22px;
-            font-size: 16px;
+            font-size: 9pt;
             color: #333333;
         }
 
@@ -889,80 +898,86 @@
         }
 
         .twins-title {
-            height: 28px;
-            line-height: 28px;
-            font-size: 20px;
+            height: 16px;
+            line-height: 16px;
+            width: 100%;
+            font-size: 14px;
             color: #333333;
         }
 
         .twins-round {
-            height: 24px;
-            width: 24px;
+            height: 16px;
+            width: 16px;
             border-radius: 50%;
             background-color: #3e3a39;
             position: relative;
-            margin-top: 2px;
-            margin-right: 5px;
+            margin-top: 1px;
+            margin-right: 3px;
             float: left;
         }
 
         .twins-round::before {
             display: inline-block;
-            height: 16px;
-            width: 16px;
+            height: 12px;
+            width: 12px;
             content: "";
             position: absolute;
             border-radius: 50%;
             background-color: #ffffff;
-            top: 4px;
-            left: 4px;
+            top: 2px;
+            left: 2px;
         }
 
         .twins-round::after {
             display: inline-block;
-            height: 10px;
-            width: 10px;
+            height: 6px;
+            width: 6px;
             content: "";
             position: absolute;
             border-radius: 50%;
             background-color: #3e3a39;
-            top: 7px;
-            left: 7px;
+            top: 5px;
+            left: 5px;
         }
 
         .twins-name {
+            width: 60%;
             float: left;
         }
 
         .twins-content {
             margin: 10px 0;
+            width: 100%;
         }
 
         .charts-img {
-            height: 310px;
-            margin: 10px auto;
-            padding-left: 30px;
+            /* height: 190px; */
+            width: 420px;
+            margin-left: 10px;
+            margin-bottom: 10px;
         }
 
         .charts-desc p {
-            font-size: 12px;
+            font-size: 7pt;
             color: #151515;
-            letter-spacing: -0.45px;
+            letter-spacing: -0.65px;
             line-height: 18px;
-            margin-left: 70px;
+            margin-left: 30px;
         }
 
         .table-box table {
-            width: 100%;
+            width: 96%;
             border-collapse: collapse;
-            min-height: 46px;
-            line-height: 46px;
+            min-height: 24px;
+            line-height: 24px;
             text-align: center;
+            font-size: 8pt;
         }
 
         .table-box thead {
-            background: #ECECEC;
+            background: #cccccc;
             color: #333333;
+            line-height: 14px;
         }
 
         .table-box table,
@@ -972,9 +987,11 @@
         }
 
         .table-box table th:first-child,
-        .table-box table td:first-child {
+        .table-box table td:first-child,
+        .table-box table th:last-child,
+        .table-box table td:last-child {
             text-align: left;
-            padding-left: 25px;
+            padding-left: 15px;
         }
 
         .star-box {
@@ -986,43 +1003,44 @@
         }
 
         .star {
-            height: 16px;
-            width: 16px;
+            height: 8px;
+            width: 8px;
             float: left;
+            margin-top: 8px;
         }
 
         .solid-star {
-            background: url(../img/Star1.png) no-repeat center
+            background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/Star1.png) no-repeat center;
+            background-size: 100% 100%;
         }
 
         .empty-star {
-            background: url(../img/Star2.png) no-repeat center
+            background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/Star2.png) no-repeat center;
+            background-size: 100% 100%;
         }
 
         .dashed-box {
             height: 100%;
             width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            padding: 8px 5px;
+            padding: 0px 2.5px
         }
 
         .dashed {
             display: inline-block;
-            font-size: 12px;
-            height: 24px;
-            line-height: 12px;
-            border: 1px dashed #B8B8B8;
+            font-size: 8pt;
+            height: 14px;
+            width: auto;
+            line-height: 14px;
+            border: 0.5px dashed #B8B8B8;
             border-radius: 2px;
-            padding: 5px 10px;
-            margin: 2.5px
+            padding: 1px;
+            margin: 2.5px;
         }
 
         /* 错题整理 */
 
         .error-title {
-            background: url(../img/errorTitle.png) no-repeat center;
+            background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/errorTitle.png) no-repeat center;
         }
 
         /* 错题整理及提分训练公共样式 */
@@ -1096,7 +1114,7 @@
         /* 提分训练 */
 
         .exercise-title {
-            background: url(../img/exerciseTitle.png) no-repeat center;
+            background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/exerciseTitle.png) no-repeat center;
         }
 
         .lost-title {
@@ -1108,8 +1126,6 @@
             text-align: center;
             margin: 30px 0px;
         }
-
-
         /* 夏老师 -----end -----**/
 
     </style>
