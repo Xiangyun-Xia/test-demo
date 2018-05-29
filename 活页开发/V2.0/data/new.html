@@ -1,0 +1,1129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!-- 246*174-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+        body{
+            font-family: SimSun;
+        }
+        .hidden{
+            display: none;
+        }
+        .break-after{
+            page-break-after: always;
+        }
+        .break-before{
+            page-break-before: always;
+        }
+        .footer{
+            position: running(footer);
+            font-size: 11px;
+        }
+        .footerLeft {
+            position: running(footerLeft);
+        }
+        .footerRight {
+            position: running(footerRight);
+        }
+
+        @page :left{
+            size : 21.6cm 30.5cm;
+            margin-top:2.90cm;
+            margin-bottom: 2.90cm;
+            margin-left: 2.30cm;
+            margin-right: 2.30cm;
+        }
+
+        @page :right{
+            size : 21.6cm 30.5cm;
+            margin-top:2.90cm;
+            margin-bottom: 2.90cm;
+            margin-left: 2.30cm;
+            margin-right: 2.30cm;
+        }
+
+        @page :left{
+            @top-center {
+                margin-top:3cm;
+                content: counter(page);
+                padding-right: 12cm;
+                padding-top: 1.1cm;
+                background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/counter-left.png) no-repeat left bottom;
+                background-size: 3.2cm 1.2cm;
+                font-size: 14px;
+                /*font-weight: bold;*/
+                font-family: Times New Roman;
+            }
+
+            @bottom-center {
+                content: element(footer);
+            }
+        }
+
+        @page :right{
+            @top-center {
+                margin-top:3cm;
+                content: counter(page);
+                padding-left: 12cm;
+                padding-top: 1.1cm;
+                background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/counter-right.png) no-repeat right bottom;
+                background-size:3.2cm 1.2cm;
+                font-size: 14px;
+                /*font-weight: bold;*/
+                font-family: Times New Roman;
+            }
+
+            @bottom-center {
+                content: element(footer);
+            }
+        }
+
+        /*郜金丹 start*/
+      /*  *{
+            padding: 0;
+            margin:0;
+        }
+        html,body{
+            height:100%;
+            color: #444;
+        }
+        ul{
+            list-style: none;
+        }
+        .container{
+            font-size: 14px;
+            background: #fff;
+        }
+        !*分页*!
+        .pageBox{
+            overflow: hidden;
+        }
+        .page{
+            width: 110px;
+            height: 22px;
+            line-height: 22px;
+        }
+        .pagefr{
+            float: right;
+            background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/pagefr.png) no-repeat right center;
+            background-size: 100%;
+            text-indent: 51px;
+        }
+        .pagefl{
+            float: left;
+            background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/pagefl.png) no-repeat left center;
+            background-size: 100%;
+            text-indent: 52px;
+        }
+        !*分页*!
+        .analysisTopic{
+            font-size: 30px;
+            color: #595757;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        .reportDetail{
+            margin-bottom: 16px;
+        }
+        .reportDetail label{
+            display: inline-block;
+            width: 24%;
+        }
+        .reportDetail label span{
+            font-weight: 700;
+        }
+        .reportDetail label em{
+            font-style: normal;
+        }
+        !*表格*!
+        .table_div{
+            position: relative;
+            padding-top: 30px;
+            margin-top: 30px;
+        }
+        .tableTopic{
+            border:solid 1px #585757;
+            border-bottom: none;
+            height: 44px;
+            position: relative;
+        }
+        .tableTopic .detailBox{
+            height: 44px;
+            width: 100%;
+            background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/topic.png) no-repeat center top;
+            text-align: center;
+            font-weight: 700;
+            position: absolute;
+            top:-28px;
+        }
+        .tableTopic span{
+            display: inline-block;
+            margin:12px 5px 0;
+        }
+        .table{
+            word-break: break-all;
+            word-wrap: break-word;
+            padding: 0px;
+            border-spacing: 0;
+            border-collapse: collapse;
+            width: 100%;
+            color: #585757;
+        }
+        .table th,.table td{
+            border:solid 1px #585757;
+            text-align: center;
+            white-space: nowrap;
+            padding: 0 5px;
+        }
+        .table th{
+            background: #f2f2f2;
+            height: 24px;
+        }
+        .table td{
+            line-height: 24px;
+        }
+        .linefeed, .linefeed2{
+            display: block;
+            white-space: normal;
+            text-align: left;
+        }
+        .linefeed{
+            width: 213px;
+        }
+        .linefeed2{
+            width: 260px;
+        }
+        .itemTable {
+            overflow: hidden;
+            border-bottom: solid 1px #585757;
+            margin-bottom: 10px;
+        }
+        !*分割符*!
+        .decollator{
+            width: 100%;
+            height: 24px;
+            background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/decollator.png) no-repeat center;
+            margin-top: 40px;
+        }
+        .knoledgeDetail{
+            text-align: center;
+            margin: 30px 0 25px;
+        }
+        .knoledgeDetail span{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .knoledgeDetail span:nth-child(2){
+            margin:0 65px;
+        }
+        .ellipsis{
+            display: block;
+            width: 284px;
+            white-space: normal;
+            text-align: left;
+        }
+        !*成绩报告单*!
+        .angleBox{
+            height: 861px;
+            padding: 30px;
+            border:solid 3px #8e8e8e;
+            position: relative;
+            font-size: 16px;
+        }
+        .pageAngle{
+            position: absolute;
+            width: 23px;
+            height: 23px;
+        }
+        .angletl{
+            left: 0;
+            top:0;
+            background:#fff url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/pageangle.png) no-repeat;
+            background-size: 100%;
+        }
+        .angletr{
+            right: 0;
+            top:0;
+            background:#fff url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/angletr.png) no-repeat;
+            background-size: 100%;
+        }
+        .anglebl{
+            right: 0;
+            bottom: 0;
+            background:#fff url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/anglebr.png) no-repeat;
+            background-size: 100%;
+        }
+        .anglebr{
+            left: 0;
+            bottom: 0;
+            background:#fff url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/anglebl.png) no-repeat;
+            background-size: 100%;
+        }
+        .analysisTopic p{
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        .examIntroduce{
+            margin-bottom: 30px;
+            line-height: 26px;
+        }
+        .examIntroduce em{
+            font-style: normal;
+        }
+        .examIntroduce span{
+            font-weight: 700;
+        }
+        .scoreTable{
+            width: 75%;
+            margin: 0 auto 30px;
+        }
+        .congrat {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .congrat span{
+            font-weight: 700;
+        }
+        .manual{
+            margin-bottom: 60px;
+            line-height: 26px;
+        }
+        .qcodeBox{
+            text-align: center;
+        }
+        .offical,.wxcode{
+            display: inline-block;
+            margin: 0 10px 30px;
+        }
+        .qcodeBox p{
+            text-align: center;
+            color: #585757;
+        }
+        .offical span,.wxcode span{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+        .offical p,.wxcode p{
+            font-size: 12px;
+        }
+        .offical span{
+            background:url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/offical.png);
+            background-size: 100%;
+        }
+        .wxcode span{
+            background:url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/wxcode.png);
+            background-size: 100%;
+        }
+
+        .Chineselevel{
+            line-height: 30px;
+            margin-bottom: 50px;
+        }
+        .Chineselevel .levelTopic{
+            font-weight: 700;
+        }
+        .Chineselevel p{
+            display: inline-block;
+        }
+        !*分析报告-错题详情*!
+        .errorLabel{
+            margin-bottom: 0;
+        }
+        .errorLabel.reportDetail label:first-child{
+            width: 100%;
+        }
+        .errorLabel label{
+            margin-bottom: 10px;
+        }
+        .questionNo{
+            margin-bottom: 8px;
+            margin-top:20px;
+        }
+        .questionNo em{
+            display: inline-block;
+            font-size:10px;
+            transform : scale(0.8);
+            -webkit-transform : scale(0.8);
+            font-style: normal;
+            color: #585757;
+        }
+        .listp{
+            overflow: hidden;
+            margin-bottom: 3px;
+        }
+        .listp p{
+            font-size:10px;
+            transform : scale(0.8);
+            -webkit-transform : scale(0.8);
+            float: left;
+            color: #585757;
+        }
+        .errorTable{
+            margin-bottom: 10px;
+            width: auto;
+        }
+
+        .errorTable td{
+            width: 54px;
+        }
+        .errorTable td:first-child{
+            background: #f2f2f2;
+            font-weight: 700;
+            width: 70px;
+            color: #444;
+        }
+        .Completion{
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .Completion label{
+            display: block;
+            float: left;
+            width: 16.6%;
+            margin-bottom: 10px;
+        }
+        .Completion label span{
+            float: left;
+        }
+        .Completion label em{
+            display: block;
+            float: left;
+            width: 45px;
+            border-bottom: solid 1px #585757;
+            text-align: center;
+            font-style: normal;
+            vertical-align: bottom;
+        }
+        !*封面*!
+
+        .cover,.alyIndex,.wrongIndex,.subproIndex,.learnSituat,.wrongTitle,.subProgram,.circle{
+            width: 170mm;
+            height: 245mm;
+            position: relative;
+        }
+        .cover{
+            background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/index.png) no-repeat;
+            background-size: 100%;
+        }
+        .alyIndex{
+            background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/alyIndex.png) no-repeat;
+            background-size: 100%;
+        }
+        .wrongIndex{
+            background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/wrongIndex.png) no-repeat;
+            background-size: 100%;
+        }
+        .subproIndex{
+            background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/subproIndex.png) no-repeat;
+            background-size: 100%;
+        }
+        .learnSituat{
+            background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/learnSituat.png) no-repeat;
+            background-size: 100%;
+        }
+        .wrongTitle{
+            background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/wrongTitle.png) no-repeat;
+            background-size: 100%;
+        }
+        .subProgram{
+            background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/subProgram.png) no-repeat;
+            background-size: 100%;
+        }
+        .circle{
+            background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/circle.png) no-repeat;
+            background-size: 100%;
+        }
+        .username,.usergrad,.schoolname{
+            position: absolute;
+            width: 67mm;
+            right: 46mm;
+            text-align: center;
+            font-size: 18px;
+        }
+        .schoolname{
+            top: 141mm;
+            height: 42px
+        }
+        .schoolname td{
+            line-height: 20px;
+        }
+        .username{
+            top:179mm;
+        }
+        .usergrad{
+            top: 162mm;
+        }
+        .subject{
+            width: 160px;
+            font-size: 26pt;
+            color: #585757;
+            position: absolute;
+            top:130mm;
+            right: 24mm;
+        }
+
+        !*whg*!
+        .question-table{
+            width: 100%;
+        }
+        .error_content{
+            margin:0 auto;
+            font-size: 14px;
+            height:100%;
+        }
+        .error-info{
+            margin:0 auto;
+            font-size: 14px;
+            height:100%;
+        }
+        .error_title{
+            height:32px;
+            width: 120px;
+            background: #fff url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/error_title.png) no-repeat left top;
+            background-size: 100%;
+            margin-bottom: 20px;
+        }
+        .error_quetionNum{
+            width: 20px;
+            float: left;
+            line-height: 16px;
+        }
+        .error_quetionCont{
+            !*display: inline-block;*!
+            width: 600px;
+        }
+        .error_input{
+            vertical-align: top;
+        }
+        .filed_left{
+            margin-right: 5px;
+        }
+        .filed_right{
+            margin-right: 10px;
+        }
+        .input_first{
+            padding-right: 30px;
+        }
+
+        .input_group{
+            line-height: 20px;
+            width: 100%;
+            overflow: hidden;
+            text-overflow:clip;
+            white-space: nowrap;
+        }
+        .input_group span{
+            vertical-align: middle;
+        }
+        .input_box{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #898a89;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .error_resion{
+            margin-top: 20px;
+        }
+        .error_group{
+            margin-bottom: 7px;
+            overflow: hidden;
+        }
+        .error_group:last-child{
+            width:93%;
+            margin-top: 20px;
+
+        }
+        .error_label{
+            display: inline-block;
+            width: 92px;
+            padding-right: 10px;
+            text-align: left;
+            font-weight: 700;
+            line-height: 14px;
+        }
+        .input_group .text_decoration{
+            width:360px;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+        .error_filed.error_width{
+            display: inline-block;
+            width: 350px;
+            white-space: nowrap;
+        }
+        .error_filed{
+            display: inline-block;
+            width: 82%;
+            vertical-align: top;
+        }
+        .error_filednew{
+            width: 82%;
+            vertical-align: top;
+        }
+        .error_filednew {
+            display: block;
+            padding-left: 109px;
+            vertical-align: top;
+            margin-top: -17px;
+        }
+        .error_img{
+            display: inline-block;
+            vertical-align: -4px;
+            width: 82%;
+        }
+
+        .error_img_new{
+            vertical-align: -4px;
+            width: 82%;
+        }
+
+        .error_img_new ul li.litext{
+            float: left;
+            width: 33.3%;
+        }
+        .error_img ul li span{
+            display: inline-block;
+            width: 32px;
+            text-align: right;
+            vertical-align: middle;
+        }
+        .error_img ul li img{
+            vertical-align: middle;
+            height: 22px;
+        }
+        .cutoff-rule{
+            margin: 20px 0;
+            width: 90%;
+        }
+        .result{
+            display: inline-block;
+            width: 82%;
+            vertical-align: top;
+        }
+        .result ul li{
+            float: left;
+            width: 25%;
+            margin-bottom: 10px;
+        }
+        .result ul li span{
+            display: inline-block;
+            width: 42px;
+        }
+        .question_title{
+            font-weight: 700;
+            padding-bottom: 10px;
+        }
+
+        .question_title img,.question_content img,.error_quetionCont span img{
+            vertical-align:middle;
+        }
+
+        .question_type{
+            width: 100%;
+            height:100%;
+            vertical-align: top;
+            position: relative;
+            background: #fff;
+        }
+        .question_content{
+            min-height: 50px;
+            margin-bottom: 10px;
+        }
+        .result_pic{
+            vertical-align:top;
+            width: 165px;
+            margin-top: -3px;
+        }
+        .answer-box{
+            display: inline-block;
+        }
+        .err_imgs{
+            padding-top: 4px;
+        }
+        .result_pic_other{
+            vertical-align:top;
+            width: 165px;
+            margin-top: 0px;
+        }
+        .err_imgs__other{
+            padding-top: 0px;
+        }
+        .result_pic_big{
+            vertical-align: top;
+            max-width:400px;
+            margin-top: 4px;
+            width: 50%;
+        }
+
+        .result_pic_bignew{
+            vertical-align: top;
+            max-width:600px;
+            margin-top: 3px;
+            width: 60%;
+        }
+        .question_scratch{
+            display: inline-block;
+            width: 24%;
+            vertical-align: top;
+        }
+
+        .scrap{
+            width: 160px;
+            height: 63px;
+            background: url(http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/scrap.png) no-repeat;
+            background-size: 100%;
+            margin-left: 10px;
+        }
+
+        a{
+            color: #000000;
+        }
+        .line{
+            border-top:solid 1px #000;
+            padding-top: 10px;
+        }
+        !*海刚加的 *!
+        .parse_left, .parse_right{
+            float: left;
+            word-break: break-all;
+            word-wrap:break-word;
+        }
+        .parse_left{
+            width:7%;
+            vertical-align: middle;
+            text-align: center;
+            height: 24px;
+            line-height: 24px;
+        }
+        .parse_right{
+            width:93%;
+            min-height: 24px;
+            line-height: 24px;
+        }
+        .parse_wrap{
+            max-height: 23px;
+            line-height: 23px;
+            vertical-align: center;
+            overflow: hidden;
+        }
+        .error_text{
+            display: inline-block;
+            width: 21px;
+            height: 23px;
+            line-height: 23px;
+            vertical-align: center;
+            text-align: center;
+            background:url('http://xuexin-web.oss-cn-shanghai.aliyuncs.com/tfj/errbackg.png') no-repeat;
+        }
+        .textStyle{
+            line-height: 30px;
+        }
+*/
+
+        /*郜金丹 end*/
+
+        /* 夏老师**/
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, a, fieldset, input, textarea, p, blockquote, th, td, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei";
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 1em;
+            font-weight: normal
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            border: 0
+        }
+
+        li {
+            list-style: none
+        }
+
+        input, label, select, option, textarea, button, fieldset, legend {
+            font-size: 1em;
+            border: none;
+            outline: none;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            color: #000;
+            background: #fff;
+            font-size: 14px;
+            line-height: 1.25;
+        }
+
+
+        /* 公共样式 */
+
+        .common-page {
+            width: 1030px;
+            padding: 20px;
+            margin: 20px auto;
+            border: 1px solid #000;
+        }
+
+        .common-title {
+            height: 22px;
+            line-height: 22px;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .common-content {
+            border: 1px solid #E0E7EE;
+            padding: 20px 30px;
+        }
+
+        /* 概要分析 */
+
+        .report-content {
+            padding: 20px 40px;
+        }
+
+        .big-title {
+            height: 45px;
+            line-height: 45px;
+            font-size: 32px;
+            color: #333333;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .desc-title {
+            height: 20px;
+            line-height: 20px;
+            color: #333333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .grade-box {
+            height: 140px;
+            border: 1px solid #d3d3d3;
+            border-radius: 5px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+
+        .grade-box-left {
+            width: 190px;
+            border-right: 1px solid #999;
+            text-align: center;
+        }
+
+        .grade-box-left-title {
+            height: 16px;
+            line-height: 16px;
+            font-size: 16px;
+            color: #333333;
+            margin-top: 8px;
+        }
+
+        .grade-box-left-score {
+            height: 34px;
+            line-height: 34px;
+            font-size: 30px;
+            color: #333333;
+            margin-top: 25px;
+        }
+
+        .grade-box-left-grade {
+            height: 50px;
+            line-height: 36px;
+            width: 50px;
+            font-family: "HannotateSC-W7";
+            background: url(../img/flower.png) no-repeat;
+            margin: 16px auto 0;
+        }
+
+        .grade-box-right {
+            flex: 1;
+            padding-left: 56px;
+        }
+
+        .grade-box-right-top {
+            margin-top: 18px;
+            margin-bottom: 24px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 14px;
+            color: #333333;
+        }
+
+        .grade-box-right-top span {
+            margin-right: 50px;
+        }
+
+        .grade-box-right-top span:last-child {
+            margin-right: 0;
+        }
+
+        .grade-box-right-bottom {
+            height: 22px;
+            line-height: 22px;
+            font-size: 16px;
+            color: #333333;
+        }
+
+        .twins-box {
+            margin-bottom: 20px;
+        }
+
+        .twins-title {
+            height: 28px;
+            line-height: 28px;
+            font-size: 20px;
+            color: #333333;
+        }
+
+        .twins-round {
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background-color: #3e3a39;
+            position: relative;
+            margin-top: 2px;
+            margin-right: 5px;
+            float: left;
+        }
+
+        .twins-round::before {
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background-color: #ffffff;
+            top: 4px;
+            left: 4px;
+        }
+
+        .twins-round::after {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background-color: #3e3a39;
+            top: 7px;
+            left: 7px;
+        }
+
+        .twins-name {
+            float: left;
+        }
+
+        .twins-content {
+            margin: 10px 0;
+        }
+
+        .charts-img {
+            height: 310px;
+            margin: 10px auto;
+            padding-left: 30px;
+        }
+
+        .charts-desc p {
+            font-size: 12px;
+            color: #151515;
+            letter-spacing: -0.45px;
+            line-height: 18px;
+            margin-left: 70px;
+        }
+
+        .table-box table {
+            width: 100%;
+            border-collapse: collapse;
+            min-height: 46px;
+            line-height: 46px;
+            text-align: center;
+        }
+
+        .table-box thead {
+            background: #ECECEC;
+            color: #333333;
+        }
+
+        .table-box table,
+        .table-box table tr th,
+        .table-box table tr td {
+            border: 1px solid rgba(151, 151, 151, 0.43);
+        }
+
+        .table-box table th:first-child,
+        .table-box table td:first-child {
+            text-align: left;
+            padding-left: 25px;
+        }
+
+        .star-box {
+            display: inline-block;
+            height: auto;
+            width: auto;
+            margin: auto;
+            vertical-align: middle;
+        }
+
+        .star {
+            height: 16px;
+            width: 16px;
+            float: left;
+        }
+
+        .solid-star {
+            background: url(../img/Star1.png) no-repeat center
+        }
+
+        .empty-star {
+            background: url(../img/Star2.png) no-repeat center
+        }
+
+        .dashed-box {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 8px 5px;
+        }
+
+        .dashed {
+            display: inline-block;
+            font-size: 12px;
+            height: 24px;
+            line-height: 12px;
+            border: 1px dashed #B8B8B8;
+            border-radius: 2px;
+            padding: 5px 10px;
+            margin: 2.5px
+        }
+
+        /* 错题整理 */
+
+        .error-title {
+            background: url(../img/errorTitle.png) no-repeat center;
+        }
+
+        /* 错题整理及提分训练公共样式 */
+
+        .question-box {
+            margin-bottom: 5px;
+        }
+
+        .error-title,
+        .exercise-title {
+            height: 47px;
+            width: 144px;
+            margin: 0px 0px 10px;
+        }
+
+        .question-answer,
+        .question-points,
+        .question-explain {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .question-half {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .question-text {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            line-height: 26px;
+        }
+
+        .question-test-index {
+            width: 20px;
+        }
+
+        .question-text-content {
+            flex: 1;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .question-title {
+            font-size: 14px;
+            color: #333333;
+            line-height: 20px;
+            width: 84px;
+        }
+
+        .question-title span {
+            letter-spacing: 2.8px;
+        }
+
+        .question-word {
+            flex: 1;
+            line-height: 20px;
+        }
+
+        /* 返回题型中的填空类名样式 */
+
+        .quizPutTag {
+            display: inline-block;
+            width: 50px;
+            border-bottom: 1px solid #000;
+        }
+
+        /* 提分训练 */
+
+        .exercise-title {
+            background: url(../img/exerciseTitle.png) no-repeat center;
+        }
+
+        .lost-title {
+            height: 25px;
+            line-height: 25px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #333333;
+            text-align: center;
+            margin: 30px 0px;
+        }
+
+
+        /* 夏老师 -----end -----**/
+
+    </style>
+</head>
+<body>
+
+<!--必须写在th:utext的上方 -->
+<!--<div class="footer" style="height: 2cm;"><b>﻿励志名言：</b>好好学习天天向上!</div>-->
+<!--<div class="footerLeft"><b>﻿励志名言：</b>世上无难事只怕有心人!</div>-->
+<!--<div class="footer"><b>﻿励志名言：</b>拥有梦想只是一种智力，实现梦想才是一种能力!</div>-->
+<!---->
+
+<div class="container" th:utext="${htmlContent}">htmlContent</div>
+
+
+</body>
+</html>

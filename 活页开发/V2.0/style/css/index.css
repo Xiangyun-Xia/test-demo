@@ -1,0 +1,391 @@
+/* reset */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, a, fieldset, input, textarea, p, blockquote, th, td, button {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  border: 0
+}
+
+li {
+  list-style: none
+}
+
+input, label, select, option, textarea, button, fieldset, legend {
+  border: none;
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  color: #000;
+  background: #fff;
+  font-size: 9pt;
+}
+
+/* 公共样式 */
+.clear {
+  clear: both;
+}
+
+.common-page {
+  width: 100%;
+}
+
+/* .common-title {
+  height: 22px;
+  width: 100%;
+  line-height: 22px;
+  font-size: 16px;
+  margin-bottom: 10px;
+} */
+
+.common-content {
+  width: 100%;
+  padding: 10px;
+}
+
+/* 概要分析 */
+
+.big-title {
+  height: 22px;
+  width: 100%;
+  line-height: 22px;
+  font-size: 14pt;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.desc-title {
+  height: 20px;
+  width: 100%;
+  line-height: 20px;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.desc-class {
+  margin: 0px 14px 0px 8px;
+}
+
+.grade-box {
+  width: 94%;
+  height: 70px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.grade-box-left {
+  height: 70px;
+  width: 120px;
+  border-right: 1px solid #999;
+  text-align: center;
+  float: left;
+}
+
+.grade-box-left-title {
+  height: 16px;
+  line-height: 16px;
+  color: #333333;
+  margin-top: 4px;
+}
+
+.grade-box-left-score {
+  height: 30px;
+  line-height: 30px;
+  font-size: 22px;
+  color: #333333;
+  margin-top: 10px;
+}
+
+.grade-box-left-grade {
+  height: 36px;
+  line-height: 26px;
+  width: 34px;
+  font-size: 7pt;
+  background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/flower.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 6px auto 0;
+}
+
+.grade-box-right {
+  height: 60px;
+  margin-left: 30px;
+  float: left;
+}
+
+.grade-box-right-top {
+  margin-top: 16px;
+  height: 14px;
+  line-height: 14px;
+  font-size: 8pt;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.grade-box-right-top span {
+  margin-right: 10px;
+}
+
+.grade-box-right-top span:last-child {
+  margin-right: 0;
+}
+
+.grade-box-right-bottom {
+  height: 22px;
+  line-height: 22px;
+  color: #333333;
+}
+
+.twins-box {
+  margin-bottom: 20px;
+}
+
+.twins-title {
+  height: 16px;
+  line-height: 16px;
+  width: 100%;
+  font-size: 14px;
+  color: #333333;
+}
+
+.twins-round {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: #3e3a39;
+  position: relative;
+  margin-top: 1px;
+  margin-right: 3px;
+  float: left;
+}
+
+.twins-round::before {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffffff;
+  top: 2px;
+  left: 2px;
+}
+
+.twins-round::after {
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: #3e3a39;
+  top: 5px;
+  left: 5px;
+}
+
+.twins-name {
+  width: 60%;
+  float: left;
+}
+
+.twins-content {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.charts-img {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.charts-desc p {
+  font-size: 7pt;
+  color: #151515;
+  letter-spacing: -0.65px;
+  line-height: 18px;
+  margin-left: 30px;
+}
+
+.table-box table {
+  width: 96%;
+  border-collapse: collapse;
+  min-height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 8pt;
+}
+
+.table-box thead {
+  background: #cccccc;
+  color: #333333;
+  line-height: 14px;
+}
+
+/* .table-box table,
+.table-box table tr th,
+.table-box table tr td {
+  border: 1px solid rgb(151, 151, 151);
+} */
+
+.table-box table th:first-child,
+.table-box table td:first-child,
+.table-box table th:last-child,
+.table-box table td:last-child {
+  text-align: left;
+  padding-left: 15px;
+}
+
+.star-box {
+  display: inline-block;
+  /* height: auto;
+  width: auto;
+  margin: auto; */
+  /* vertical-align: middle; */
+}
+
+.star {
+  height: 8px;
+  width: 8px;
+  float: left;
+  /* margin-top: 8px; */
+}
+
+.solid-star {
+  background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/Star1.png) no-repeat center;
+  background-size: 100% 100%;
+}
+
+.empty-star {
+  background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/Star2.png) no-repeat center;
+  background-size: 100% 100%;
+}
+
+.dashed-box {
+  height: 100%;
+  width: 100%;
+  padding: 0px 2.5px
+}
+
+.dashed {
+  display: inline-block;
+  font-size: 8pt;
+  /* height: 14px; */
+  /* width: auto; */
+  line-height: 14px;
+  border: 0.5px dashed #B8B8B8;
+  border-radius: 2px;
+  padding: 1px;
+  margin: 2.5px;
+}
+
+/* 错题整理 */
+
+.error-title {
+  background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/errorTitle.png) no-repeat center;
+  background-size: 100% 100%;
+}
+
+/* 错题整理及提分训练公共样式 */
+
+.question-box {
+  margin-bottom: 10px;
+}
+
+.error-title,
+.exercise-title,
+.again-title {
+  height: 26px;
+  width: 86px;
+  margin-bottom: 10px;
+}
+
+.question-answer,
+.question-points,
+.question-explain {
+  width: 100%;
+}
+
+.question-half {
+  width: 46%;
+  float: left;
+}
+
+.question-text {
+  width: 100%;
+}
+
+.question-test-index {
+  width: 12px;
+  float: left;
+}
+
+.question-text-content {
+  color: #333333;
+  margin-left: 12px;
+  margin-bottom: 10px;
+}
+
+.question-title {
+  color: #333333;
+  width: 80px;
+  float: left;
+}
+
+.question-title span {
+  letter-spacing: 2.8px;
+}
+
+.question-word {
+  margin-left: 80px;
+  width: 100%;
+  line-height: 20px;
+}
+
+/* 返回题型中的填空类名样式 */
+
+.quizPutTag {
+  display: inline-block;
+  width: 20px;
+  border-bottom: 1px solid #000;
+}
+
+/* 提分训练 */
+
+.exercise-title {
+  background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/exerciseTitle.png) no-repeat center;
+  background-size: 100% 100%;
+}
+
+.lost-title {
+  font-size: 12pt;
+  font-weight: 500;
+  color: #333333;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.again-title {
+  margin-top: 20px;
+  background: url(../img/againTitle.png) no-repeat center;
+  /* background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/againTitle.png) no-repeat center; */
+  background-size: 100% 100%;
+}
