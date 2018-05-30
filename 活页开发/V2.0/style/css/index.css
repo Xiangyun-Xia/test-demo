@@ -304,7 +304,7 @@ html, body {
   background-size: 100% 100%;
 }
 
-/* 错题整理及提分训练公共样式 */
+/* 错题整理、提分训练、答案公共样式 */
 
 .question-box {
   margin-bottom: 10px;
@@ -312,7 +312,9 @@ html, body {
 
 .error-title,
 .exercise-title,
-.again-title {
+.again-title,
+.exercise-answer-title,
+.again-answer-title {
   height: 26px;
   width: 86px;
   margin-bottom: 10px;
@@ -385,7 +387,19 @@ html, body {
 
 .again-title {
   margin-top: 20px;
-  background: url(../img/againTitle.png) no-repeat center;
-  /* background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/againTitle.png) no-repeat center; */
+  background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/againTitle.png) no-repeat center;
+  background-size: 100% 100%;
+}
+
+/* 答案 */
+
+.exercise-answer-title {
+  background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/exerciseAnswer.png) no-repeat center;
+  background-size: 100% 100%;
+}
+
+.again-answer-title {
+  margin-top: 20px;
+  background: url(http://xuexin-file.oss-cn-hangzhou.aliyuncs.com/share/image/xsl/againAnswer.png) no-repeat center;
   background-size: 100% 100%;
 }
