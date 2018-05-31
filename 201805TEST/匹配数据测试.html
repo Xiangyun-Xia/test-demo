@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+  var arr1 = [{
+    "id": 33
+  }, {
+    "id": 42
+  }, {
+    "id": 21
+  }, {
+    "id": 2
+  }, {
+    "id": 777
+  }];
+  var arr2 = [{
+    "id": 3,
+    "value": "a"
+  }, {
+    "id": 2,
+    "value": "b"
+  }, {
+    "id": 42,
+    "value": "c"
+  }];
+
+  function replace(arr1, arr2) {
+    var temp;
+    arr1.map(function (item) {
+      (temp = arr2.find(function (item2) {
+        return item.id == item2.id;
+      })) && (item.newValue = temp.value)
+      // return item;
+    })
+    return arr1;
+  }
+
+  console.log(replace(arr1, arr2));
+</script>
