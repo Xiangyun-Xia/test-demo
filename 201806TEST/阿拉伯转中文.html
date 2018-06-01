@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+<script>
+    function numberConvertToUppercase(num) {
+      num = Number(num);
+      var upperCaseNumber = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '百', '千', '万', '亿'];
+      var length = String(num).length;
+      if (length == 1) {
+        return upperCaseNumber[num];
+      } else if (length == 2) {
+        if (num == 10) {
+          return upperCaseNumber[num];
+        } else if (num > 10 && num < 20) {
+          return '十' + upperCaseNumber[String(num).charAt(1)];
+        } else {
+          return upperCaseNumber[String(num).charAt(0)] + '十' + upperCaseNumber[String(num).charAt(1)].replace('零', '');
+        }
+      }
+    }
+
+    console.log(numberConvertToUppercase(0))
+    console.log(numberConvertToUppercase(1))
+    console.log(numberConvertToUppercase(11))
+    console.log(numberConvertToUppercase(10))
+    console.log(numberConvertToUppercase(101))
+    console.log(numberConvertToUppercase(22))
+    console.log(numberConvertToUppercase(02))
+</script>
