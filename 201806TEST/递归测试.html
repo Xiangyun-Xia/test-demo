@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+<script>
+  //有一个数组，结构如下
+  const arr = [
+    {sum: 18, ele: [3, {sum:6, ele: [1,2,3]}, {sum:9, ele: [2,3,4]}]},
+    {sum: 26, ele: [1, {sum:10, ele: [3,5,2]}, {sum:15, ele: [5, 5, {sum:5, ele: [1,2,2]}]}]},
+    {sum: 21, ele: [{sum:10, ele: [3, {sum:5, ele: [1,2,2]} ,2]}, 1, {sum:10, ele: [3,5,2]}]},
+  ]
+  //我要将他进行分页处理，页面大小为15，最后生成以下结构数据
+  let arr = [
+    { number: 1, top: 0, blocks: [3,1,2,3,2,3] },
+    { number: 2, top: 0, blocks: [] },
+    { number: 3, top: 0, blocks: [] }
+  ]
+</script>
