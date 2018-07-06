@@ -1,0 +1,321 @@
+/* 页面边框样式 begin */
+.b5-odd-container {
+  width: 886px;
+  height: 1294px;
+  padding: 60px 36px 60px 64px;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+
+.b5-even-container {
+  width: 886px;
+  height: 1294px;
+  padding: 60px 64px 60px 36px;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+
+.b5-odd-page {
+  position: absolute;
+  bottom: 40px;
+  right: 36px;
+  font-size: 14px;
+}
+
+.b5-even-page {
+  position: absolute;
+  bottom: 40px;
+  left: 36px;
+  font-size: 14px;
+}
+
+.b5-container-inside {
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.b5-container-html {
+  position: absolute;
+}
+/* 页面边框样式 end */
+
+/* 暂无数据样式 begin */
+.nodata-box {
+  box-sizing: border-box;
+  height: 380px;
+  width: 100%;
+  text-align: center;
+}
+.nodata-box img {
+  margin: 90px auto 20px;
+}
+.nodata-box p {
+  height: 28px;
+  font-size: 20px;
+  color: #42495a;
+}
+/* 暂无数据样式 end */
+
+/* 整体分析样式 begin */
+.global-analysis-content {
+  width: 100%;
+  padding: 20px 28px;
+  background-color: #fff;
+}
+
+.global-analysis-top {
+  width: 100%;
+}
+
+.report-title {
+  height: 62px;
+  width: 100%;
+  text-align: center;
+  font: 36px/62px 'HannotateSC-W5';
+}
+
+.report-msg {
+  height: 18px;
+  text-align: center;
+  font: 18px/18px 'Microsoft Yahei';
+}
+
+.grade-box-outer {
+  padding: 36px 0;
+}
+
+.grade-box {
+  height: 140px;
+  width: 100%;
+  padding: 16px 0;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+.grade-box-left {
+  width: 147px;
+  height: 100%;
+  padding-top: 18px;
+  float: left;
+  border-right: 1px solid #ccc;
+  text-align: center;
+}
+
+.grade-box-left-title {
+  height: 18px;
+  font-size: 18px;
+}
+
+.grade-box-left-score {
+  font: bold 34px/34px 'Microsoft Yahei';
+  margin-top: 26px;
+}
+
+.grade-box-left-grade {
+  width: 48px;
+  height: 48px;
+  margin: 16px auto 0;
+}
+
+.grade-box-right {
+  width: 430px;
+  float: left;
+  padding-top: 18px;
+  padding-left: 18px;
+}
+
+.grade-box-right-top {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.grade-box-right-top span {
+  margin-right: 30px;
+}
+.grade-box-right-top span:last-child {
+  margin-right: 0;
+}
+
+.grade-box-right-bottom {
+  font-size: 20px;
+}
+
+.common-title {
+  height: 40px;
+  line-height: 22px;
+  font-size: 22px;
+  padding-bottom: 18px;
+}
+
+.common-round {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-color: #3e3a39;
+  position: relative;
+  margin-right: 10px;
+  float: left;
+}
+
+.common-round::before {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffffff;
+  top: 3px;
+  left: 3px;
+}
+
+.common-round::after {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: #3e3a39;
+  top: 6px;
+  left: 6px;
+}
+
+.title-name {
+  float: left;
+  font-family: 'HannotateSC-W5';
+}
+
+.charts-img {
+  width: 100%;
+}
+
+.charts-img img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.charts-desc p {
+  margin: 0;
+  font-size: 14px;
+  color: #151515;
+  letter-spacing: -0.45px;
+  line-height: 24px;
+  padding-left: 50px;
+}
+
+.charts-desc p:last-child {
+  margin-bottom: 36px;
+}
+
+.global-analysis-table .star-box {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.global-analysis-table .star {
+  height: 14px;
+  width: 14px;
+  float: left;
+}
+
+.global-analysis-table .dashed {
+  float: left;
+  font-size: 14px;
+  height: 24px;
+  line-height: 14px;
+  border: 1px dashed #B8B8B8;
+  border-radius: 2px;
+  padding: 4px 8px;
+  margin: 4px
+}
+/* 整体分析样式 end */
+
+/* 错题整理 及 提分训练样式 begin */
+.error-merge-content,
+.do-exercise-content  {
+  width: 100%;
+  padding: 20px 28px;
+  background-color: #fff;
+}
+
+.top-title {
+  height: 62px;
+  width: 150px;
+  padding-left: 12px;
+  // background: url(../img/title.png) no-repeat;
+  font-family: 'HannotateSC-W5';
+  font-size: 20px;
+  line-height: 42px;
+  color: #FEFEFE;
+  letter-spacing: 12px;
+  padding-bottom: 20px;
+}
+
+.question-text {
+  width: 100%;
+  font-size: 16px;
+  color: #333333;
+  line-height: 20px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+.question-text >>> p {
+  margin: 0;
+  line-height: 30px;
+}
+
+.question-answer,
+.question-points,
+.question-explain,
+.question-rethink {
+  width: 100%;
+  min-height: 30px;
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 10px;
+  font-family: 'SimSun';
+}
+
+.question-title {
+  font-size: 16px;
+  color: #333333;
+  line-height: 20px;
+  width: 96px;
+  float: left;
+  font-family: '思源黑体';
+}
+
+.question-title span {
+  letter-spacing: 3.2px;
+}
+
+.question-word {
+  margin-left: 96px;
+  width: 100%;
+}
+
+.question-word img {
+  max-width: 88%;
+}
+/* 错题整理 及 提分训练样式 end */
+
+/* 菁优网样式 begin */
+
+/* 菁优网样式 end */
+
+/* 公共样式 begin */
+
+/* 公共样式 end */

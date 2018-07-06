@@ -18,4 +18,14 @@
 
   http://www.w3school.com.cn/jsref/prop_node_nodetype.asp
 
-- https://cnodejs.org/topic/5994ffa0ee602e88524b4325
+- Class的作用及原理
+
+- Await
+
+- vuex相关
+
+- typescript
+
+  https://www.tslang.cn/
+
+  https://www.runoob.com/w3cnote/getting-started-with-typescript.html
