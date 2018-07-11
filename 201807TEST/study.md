@@ -30,4 +30,4 @@
 
   https://www.runoob.com/w3cnote/getting-started-with-typescript.html
 
-- 和Hjjjjß
+- 学习
