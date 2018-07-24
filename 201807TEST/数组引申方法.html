@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="div">
+    <p>1.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eveniet, animi odio natus vitae aliquid soluta aspernatur rem, libero tempore qui, earum nesciunt enim culpa. Voluptatum, aperiam. Aperiam, cupiditate repudiandae?</p>
+    <p>2.Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio odit sequi rem at numquam veritatis itaque facere, est neque non. Rem voluptatem natus itaque molestiae sunt maxime ex beatae perferendis.</p>
+    <p>3.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam nesciunt quas tempora nam non quidem iste, amet commodi sunt molestias iusto voluptate beatae ea similique, facilis repellendus voluptatem ratione corporis!</p>
+    <p>4.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore minima odit repellat corporis incidunt voluptas laborum. Eveniet provident, amet optio iste totam sint cupiditate ipsum. Perspiciatis reiciendis ducimus minima vero.</p>
+    <p>5.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum molestiae voluptatibus cupiditate nam blanditiis. Officiis ipsa error eaque porro, quas, sapiente alias velit architecto dignissimos fugit officia dolore libero earum.</p>
+  </div>
+</body>
+<script>
+  let html = document.getElementById("div")
+
+  function getHtmlNode(html) {
+    return [].find.call(html.childNodes, node => node.nodeType === 1);
+  }
+
+  var name = "zhangsan";
+  var password = "1111111";
+  var obj = {
+      name,
+      password,
+      arr:[1,2,3,4],
+      sayName(){
+        console.log(this.name);
+      }
+  };
+  console.log(obj);
+  var obj1 = {
+      age:20,
+  };
+</script>
+</html>
