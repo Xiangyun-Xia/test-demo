@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+  function clone(obj) {
+    if (!obj) return obj
+    if (typeof obj !== 'object') return obj
+    const newObj = obj.constructor === Object ? {} : []
+    for (const key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        newObj[key] = (obj[key] && typeof obj[key] === 'object') ? clone(obj[key]) : obj[key]
+      }
+    }
+    return newObj
+  }
+
+  // console.log(clone(null))
+  // console.log(clone(1))
+  // console.log(clone(function(){}))
+  // console.log(clone('1'))
+  // console.log(clone(undefined))
+  // console.log(clone(NaN))
+  // console.log(clone([1, 2, { a: 1, b: null }]))
+  console.log(clone({ a: { b: 1, c: 2 }, d: 2, c: [{ e: 3, f: 4 , m: { g: 7 } }]}))
+
+  // console.log(!null)
+  // console.log(typeof null)
+  // console.log(!undefined)
+  // console.log(typeof undefined)
+  // console.log(!1)
+  // console.log(!'1')
+  // console.log(![])
+  // console.log(!{})
+  // console.log(! function () {})
+  // console.log([].constructor === Object)
+  // console.log({}.constructor === Object)
+</script>
